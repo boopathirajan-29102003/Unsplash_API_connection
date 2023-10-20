@@ -21,11 +21,6 @@ const Unsplash = () => {
     fetchPhotos();
   }, []);
 
-
-  const handleSearch = () => {
-    setQuery(query);
-  };
-
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
@@ -33,11 +28,15 @@ const Unsplash = () => {
   return (
     <div>
       <div>
-        <input type="text" value={query} onChange={handleInputChange} />
-        <button onClick={handleSearch}>Search</button>
+        <input type="text" style={{backgroundColor:'rgb(237, 237, 237)',
+    height:'50px',
+    width:'40%',
+    fontSize:'20px',
+    marginLeft:'30%',
+    borderRadius:'20px'
+    }} value={query} onChange={handleInputChange} placeholder='Search here by name' />
       </div>
-      <PhotoList photos={photos} query={query} />
-
+      <PhotoList photos={photos} query={query} /> 
     </div>
   );
 };
