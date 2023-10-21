@@ -62,11 +62,9 @@ const Photo = ({ photo }) => {
             <img className="popup-image" src={popupImage.urls.thumb} alt={popupImage.alt_description} />
           </div>
           <div className="icon-container">
-          <IconContext.Provider value={{ size: '20px', color: 'white' }}>
-            <div className="close-icon">
-              <MdClose onClick={handleClickCloseIcon} />
-            </div>
-          </IconContext.Provider>
+              <div className="close-icon">
+                <MdClose style={{color:'white'}} onClick={handleClickCloseIcon} />
+              </div>
           </div>
         </div>
       )}
